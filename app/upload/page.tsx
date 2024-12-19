@@ -16,6 +16,35 @@ const UploadPage = () => {
       )}
       <CldUploadWidget
         uploadPreset="ggekauf"
+        options={{
+          sources: ["local"],
+          multiple: false,
+          maxFiles: 1,
+          styles: {
+            palette: {
+              window: "#464040",
+              sourceBg: "#292222",
+              windowBorder: "#c7a49f",
+              tabIcon: "#cc6600",
+              inactiveTabIcon: "#E8D5BB",
+              menuIcons: "#ebe5db",
+              link: "#ffb107",
+              action: "#ffcc00",
+              inProgress: "#99cccc",
+              complete: "#78b3b4",
+              error: "#ff6666",
+              textDark: "#4C2F1A",
+              textLight: "#D8CFCF",
+            },
+            fonts: {
+              default: null,
+              "'Merriweather', serif": {
+                url: "https://fonts.googleapis.com/css?family=Merriweather",
+                active: true,
+              },
+            },
+          },
+        }}
         onSuccess={(result, widge) => {
           //   console.log(result.info);
 
