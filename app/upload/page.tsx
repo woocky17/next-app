@@ -46,8 +46,6 @@ const UploadPage = () => {
           },
         }}
         onSuccess={(result, widge) => {
-          //   console.log(result.info);
-
           if (result.event !== "success") return;
           const info = result.info as cloudinaryResult;
           setPublicId(info.public_id);
