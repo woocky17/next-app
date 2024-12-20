@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <main className="relative h-screen">
       <Image
-        src="https://bit.ly/49LJwnM"
+        src="https://bit.ly/react-cover"
         alt="vaque"
         // width={400}
         // height={100}
