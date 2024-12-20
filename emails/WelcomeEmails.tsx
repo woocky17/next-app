@@ -6,18 +6,21 @@ import {
   Text,
   Link,
   Preview,
+  Tailwind,
 } from "@react-email/components";
 
 const WelcomeEmails = ({ name }: { name: string }) => {
   return (
     <Html>
       <Preview>Welcome</Preview>
-      <Body>
-        <Container>
-          <Text>Hello {name}</Text>
-          <Link href="#">David Ortet</Link>
-        </Container>
-      </Body>
+      <Tailwind>
+        <Body className=" bg-white">
+          <Container>
+            <Text className="font-bold text-3xl">Hello {name}</Text>
+            <Link href="#">David Ortet</Link>
+          </Container>
+        </Body>
+      </Tailwind>
     </Html>
   );
 };
