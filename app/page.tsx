@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function Home() {
   return (
     <main className="relative h-screen">
-      <Image
+      {/* <Image
         src="https://bit.ly/react-cover"
         alt="vaque"
         // width={400}
@@ -13,7 +13,8 @@ export default function Home() {
         sizes="(max-width: 480px) 80vw, (max-width: 768px) 50vw, 33vw"
         quality={100}
         priority
-      />
+      /> */}
+      <h1>Hello World</h1>
     </main>
   );
 }

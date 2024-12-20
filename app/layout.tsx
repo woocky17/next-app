@@ -1,19 +1,13 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import NavBar from "./NavBar";
 import AuthProvider from "./auth/provider";
-import Script from "next/script";
+import { Inter, Roboto } from "next/font/google";
 import GoogleScript from "./GoogleScript";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const roboto = Roboto({
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  weight: ["400", "500"],
 });
 
 export const metadata: Metadata = {
@@ -29,10 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <GoogleScript />
-      <body
-        data-theme="winter"
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body data-theme="winter" className={roboto.className}>
         <AuthProvider>
           <NavBar />
           <main className="p-5">{children}</main>
