@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import NavBar from "./NavBar";
 import AuthProvider from "./auth/provider";
-import { Inter, Roboto } from "next/font/google";
+import { Roboto } from "next/font/google";
 import GoogleScript from "./GoogleScript";
 
 const roboto = Roboto({

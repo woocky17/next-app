@@ -6,7 +6,7 @@ export async function GET(
   request: NextRequest,
   { params }: { params: Promise<{ id: string }> }
 ) {
-  const id = parseInt((await params).id);
+  const id = (await params).id;
   const user = await prisma.user.findUnique({
     where: { id: id },
   });
@@ -26,7 +26,7 @@ export async function PUT(
   if (!validation.success)
     return NextResponse.json(validation.error.errors, { status: 400 });
 
-  const id = parseInt((await params).id);
+  const id = (await params).id;
   const user = await prisma.user.findUnique({
     where: { id: id },
   });
@@ -45,7 +45,7 @@ export async function DELETE(
   request: NextRequest,
   { params }: { params: Promise<{ id: string }> }
 ) {
-  const id = parseInt((await params).id);
+  const id = (await params).id;
   const user = await prisma.user.findUnique({
     where: { id: id },
   });
